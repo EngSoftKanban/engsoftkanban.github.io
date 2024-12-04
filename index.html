@@ -1,13 +1,180 @@
 <!DOCTYPE html>
-<html>
-	<head></head>
-	<body>
-		<h2>Essa é uma página HTML servida via Github Pages.</h2>
-		<h2>O Github Pages serve somente páginas estáticas!</h3>
-		O que isso significa na prática? Acesso somente a tecnológias front-end, nada de banco de dados, nem semelhantes, só HTML, Javascript e CSS...<br><br>
-		Entrentanto, se pode ser feito com os três, então ainda dá para ser feito aqui. <br><br>
-		Ademais, a página servida é automaticamene atualizada toda vez que há um commit na main, o processo demora no máximo 1 min.
-		Contudo, cacheamento do browser pode fazer você ver versões antigas, para resolvir isso ative 'Desativar cache' na aba Redes do painel do desenvolvedor. <br><br>
-		E não, não é possível mudar o endereço, nem é para mudar o nome desse arquivo, pois o ponto de entrada de serviço do Github Pages sempre será chamado 'index.html'
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBoard - Landing Page</title>
+    <style>
+  
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container-header {
+            width: 90%;
+            max-width: 1200px;
+        }
+
+		.container-features {
+            width: 90%;
+            max-width: 1200px;
+			margin: 0 auto;
+        }
+
+        .main-header {
+            background-color: #91D991;
+            padding: 10px 0;
+        }
+
+        .main-header img {
+            max-height: 50px;
+            display: block;
+            margin-left: 20px;
+        }
+
+        .main-section {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 40px 20px;
+			background-color: #fff;
+		}
+
+		.main-section h1 {
+			font-size: 2.5rem;
+			margin-bottom: 10px;
+		}
+
+		.main-section p {
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+			color: #555;
+		}
+
+		.main-section img {
+			max-width: 45%;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.features {
+			background-color: #f9f9f9;
+			padding: 0.5em 0;
+		}
+
+		.features h2 {
+			text-align: center;
+			font-size: 2em;
+		}
+
+		.features-list {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 25px;
+			margin: 20px;
+		}
+
+		.feature-item {
+			flex: 1 1 calc(20% - 20px); 
+			text-align: center;
+			background-color: #d8eed8;
+			padding: 20px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			border-radius: 8px;
+			transition: transform 0.3s ease; 
+		}
+
+		.feature-item:hover {
+			transform: translateY(-10px); 
+		}
+
+		.feature-item img {
+			width: 50px;
+			height: 50px;
+			margin-bottom: 10px;
+		}
+        
+		.feature-item h2 {
+			color: #144d14;
+			font-size: 2em;
+		}
+
+		.feature-item h3 {
+			color: #144d14;
+			font-size: 1.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.feature-item p {
+			color: #555;
+			font-size: 1.1em;
+		}
+        .main-footer {
+			background-color: #91D991;
+			color: #000;
+			text-align: center;
+			padding: 1em 0;
+			font-size: 0.9em;
+			position: absolute; 
+			bottom: 0; 
+			width: 100%; 
+			margin-top: auto; 
+		}
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container-header">
+            <img src="logo.png" alt="Logo GreenBoard">
+        </div>
+    </header>
+
+    <section class="main-section">
+		<div>
+			<h1>Bem-vindo ao GreenBoard!</h1>
+			<p>Potencialize sua produtividade, organize tarefas e gerencie fluxos de trabalho de forma simples e gratuita. 
+				O GreenBoard é a escolha número 1 para quem busca eficiência e resultados excepcionais.</p>
+		</div>
+		<img src="projeto1.jpeg" alt="Projeto GreenBoard">
+	</section>
+
+    <section id="features" class="features">
+		<div class="container">
+			<h2>Funcionalidades</h2>
+			<div class="features-list">
+				<div class="feature-item">
+					<img src="checklist.svg" alt="Organização">
+					<h3>Organização</h3>
+					<p>Gerencie suas tarefas de forma clara e eficiente, sem complicação.</p>
+				</div>
+				<div class="feature-item">
+					<img src="apps.svg" alt="Simplicidade">
+					<h3>Simplicidade</h3>
+					<p>Interface intuitiva, fácil de usar por qualquer pessoa, em qualquer nível.</p>
+				</div>
+				<div class="feature-item">
+					<img src="groups.svg"Colaboração">
+					<h3>Colaboração</h3>
+					<p>Trabalhe em equipe, compartilhe seu progresso e comunique-se facilmente.</p>
+				</div>
+				<div class="feature-item">
+					<img src="timeline.svg" alt="Controle de Fluxos">
+					<h3>Controle de Tarefas e Fluxos</h3>
+					<p>Gerencie projetos e fluxos de trabalho sem esforço, maximizando a eficiência.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 GreenBoard. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
 </html>
